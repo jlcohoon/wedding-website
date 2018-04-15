@@ -56,6 +56,14 @@ F6A9C7/* Media Queries */
 .navbar-toggler-icon {
   background-image: url('assets/menu.svg');
 }
+
+/* RSVP page */
+
+#rsvp-img {
+  max-height: 400px;
+  margin-top: 50px;
+}
+
 /* Background */
 
 #backgroundImg {
