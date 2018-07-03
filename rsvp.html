@@ -15,9 +15,260 @@
 
 
     <!-- Custom styles by Hannah -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Molle:400i|Quicksand:700" rel="stylesheet">
+    <style>
+      /* Media Queries */
 
+      .altHeaderImg {
+        display: none;
+      }
+      .littleNav {
+        display: none;
+      }
+
+      @media (max-width: 768px){
+        .bigNav {
+          display: none;
+        }
+        .littleNav {
+          display: inline-block;
+          margin: 15px 0px;
+        }
+        body {
+          padding-top: 0px !important;
+        }
+        .headerImg {
+          display: none;
+        }
+        .altHeaderImg {
+          display: inline-block;
+        }
+      }
+
+      @media (max-width: 510px){
+        .announcement {
+          background-position-x: center;
+        }
+      }
+
+      .navbar-toggler-icon {
+        background-image: url('assets/menu.svg');
+      }
+
+      /* RSVP page */
+
+      #rsvp-img {
+        max-height: 400px;
+        margin-top: 50px;
+      }
+
+      /* Background */
+
+      #headerImg {
+        margin: auto;
+      }
+
+      /* Containers */
+
+      .masthead, .mastfoot, .cover-container {
+        width: 100%;
+      }
+
+      .site-wrapper {
+        box-shadow: none;
+      }
+
+      .site-wrapper-inner {
+        /* background: #ffffff; */
+      }
+
+      .info {
+        z-index: 100;
+      }
+
+      .navbar {
+        background-color: white;
+        text-align: center;
+      }
+
+
+
+      /* Body */
+      body {
+        text-shadow: none;
+        color: #161515;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        padding-top: 75px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .flex {
+        display: flex
+      }
+
+      /* Buttons */
+
+      .rsvp {
+        margin: auto;
+      }
+
+      .btn {
+        color: #f9c759;
+        border: 3px solid #e5451a;
+        border-radius: 0;
+        background-color: #ffffff;
+      }
+
+      .btn-secondary{
+        color: #f9c759;
+        background-color: #ffffff;
+        display: inline-block;
+      }
+
+      .btn-secondary:hover,
+      .btn-secondary:focus {
+        color: #F6A9C7;
+        transition: color .15s ease-in-out;
+        text-decoration: none;
+
+      }
+      .btn:hover,
+      .btn:focus  {
+        color: #F6A9C7;
+        border: 3px solid #F6A9C7;
+        transition: color .15s ease-in-out,
+                    border-color .15s ease-in-out;
+      }
+
+      /* Font styles */
+
+      p {
+        font-family: 'Quicksand', sans-serif;
+      }
+
+      .tcenter{
+        text-align: center;
+      }
+
+      h1 {
+        font-weight: 700;
+        opacity: 1;
+        font-size: 4em;
+      }
+
+      h2 {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        margin: 1.5em 0em;
+        color: black;
+      }
+
+
+      .accent {
+        color: #f9c759;
+        font-weight: 700;
+      }
+
+      .darkAccent {
+        color: #3b54bb;
+      }
+
+      .bannerAccent {
+        color: #3297DF;
+        /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+      }
+
+      .lead {
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 2em;
+      }
+
+      .emphasis {
+        text-transform: uppercase;
+        font-size: 4em;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      a,
+      a:focus {
+        color: #161515;
+        transition: color .15s ease-in-out;
+        text-decoration: none;
+
+      }
+
+      a:hover {
+        color: #F6A9C7;
+        text-decoration: none;
+        transition: color .15s ease-in-out,
+                    border-color .15s ease-in-out;
+      }
+
+      #event a,
+      #registry a,
+      #travel a {
+        text-decoration: underline;
+      }
+
+      .text-muted {
+        color: e5451a;
+      }
+
+      .nav-item {
+        font-family: 'Josefin Sans', sans-serif;
+        color: black;
+        text-align: left;
+      }
+
+      ul {
+        font-family: 'Quicksand', sans-serif;
+      }
+      /* images*/
+
+      .home-img {
+        height: 300px;
+        margin: auto;
+
+      }
+
+      .hamburger {
+        height: 25px;
+        color: #e5451a;
+      }
+
+      .bannerHidden {
+        color: #3b54bb;
+        text-align: center;
+      }
+      /* Visual Dividers*/
+
+      .bottomRed {
+        border-bottom: 3px solid #e5451a;
+      }
+
+      hr {
+        border-width: 3px solid #e5451a;
+        width: 100%;
+        margin-top: 0px;
+      }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Quicksand:700" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121835518-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121835518-1');
+    </script>
 
 </head>
 <body  id="top" cz-shortcut-listen="true">
@@ -67,13 +318,9 @@
       <main role="main" class="container">
 
         <div class="tcenter row">
-          <div class="col-md-6 col-sm-12">
-                <h2>RSVP</h2>
-                <p>Online RSVP will be available after invitations have been sent out.</p>
-          </div>
-          <div class="col-md-6 col-sm-12">
-                <img id="rsvp-img" src="assets/hiking.png" alt="adorable gif of Chris and Hannah" >
-          </div>
+
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfs3W9uB7UPsMjbqy5Uxr_wff8ZMhr2xRs7gOCoD1avlCtjFQ/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
         </div>
 
       </main>

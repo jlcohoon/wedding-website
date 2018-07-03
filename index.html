@@ -15,8 +15,260 @@
 
 
     <!-- Custom styles by Hannah -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Molle:400i|Quicksand:700" rel="stylesheet">
+    <style>
+      /* Media Queries */
+
+      .altHeaderImg {
+        display: none;
+      }
+      .littleNav {
+        display: none;
+      }
+
+      @media (max-width: 768px){
+        .bigNav {
+          display: none;
+        }
+        .littleNav {
+          display: inline-block;
+          margin: 15px 0px;
+        }
+        body {
+          padding-top: 0px !important;
+        }
+        .headerImg {
+          display: none;
+        }
+        .altHeaderImg {
+          display: inline-block;
+        }
+      }
+
+      @media (max-width: 510px){
+        .announcement {
+          background-position-x: center;
+        }
+      }
+
+      .navbar-toggler-icon {
+        background-image: url('assets/menu.svg');
+      }
+
+      /* RSVP page */
+
+      #rsvp-img {
+        max-height: 400px;
+        margin-top: 50px;
+      }
+
+      /* Background */
+
+      #headerImg {
+        margin: auto;
+      }
+
+      /* Containers */
+
+      .masthead, .mastfoot, .cover-container {
+        width: 100%;
+      }
+
+      .site-wrapper {
+        box-shadow: none;
+      }
+
+      .site-wrapper-inner {
+        /* background: #ffffff; */
+      }
+
+      .info {
+        z-index: 100;
+      }
+
+      .navbar {
+        background-color: white;
+        text-align: center;
+      }
+
+
+
+      /* Body */
+      body {
+        text-shadow: none;
+        color: #161515;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        padding-top: 75px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .flex {
+        display: flex
+      }
+
+      /* Buttons */
+
+      .rsvp {
+        margin: auto;
+      }
+
+      .btn {
+        color: #f9c759;
+        border: 3px solid #e5451a;
+        border-radius: 0;
+        background-color: #ffffff;
+      }
+
+      .btn-secondary{
+        color: #f9c759;
+        background-color: #ffffff;
+        display: inline-block;
+      }
+
+      .btn-secondary:hover,
+      .btn-secondary:focus {
+        color: #F6A9C7;
+        transition: color .15s ease-in-out;
+        text-decoration: none;
+
+      }
+      .btn:hover,
+      .btn:focus  {
+        color: #F6A9C7;
+        border: 3px solid #F6A9C7;
+        transition: color .15s ease-in-out,
+                    border-color .15s ease-in-out;
+      }
+
+      /* Font styles */
+
+      p {
+        font-family: 'Quicksand', sans-serif;
+      }
+
+      .tcenter{
+        text-align: center;
+      }
+
+      h1 {
+        font-weight: 700;
+        opacity: 1;
+        font-size: 4em;
+      }
+
+      h2 {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        margin: 1.5em 0em;
+        color: black;
+      }
+
+
+      .accent {
+        color: #f9c759;
+        font-weight: 700;
+      }
+
+      .darkAccent {
+        color: #3b54bb;
+      }
+
+      .bannerAccent {
+        color: #3297DF;
+        /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+      }
+
+      .lead {
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 2em;
+      }
+
+      .emphasis {
+        text-transform: uppercase;
+        font-size: 4em;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      a,
+      a:focus {
+        color: #161515;
+        transition: color .15s ease-in-out;
+        text-decoration: none;
+
+      }
+
+      a:hover {
+        color: #F6A9C7;
+        text-decoration: none;
+        transition: color .15s ease-in-out,
+                    border-color .15s ease-in-out;
+      }
+
+      #event a,
+      #registry a,
+      #poolParty a,
+      #travel a {
+        text-decoration: underline;
+      }
+
+      .text-muted {
+        color: e5451a;
+      }
+
+      .nav-item {
+        font-family: 'Josefin Sans', sans-serif;
+        color: black;
+        text-align: left;
+      }
+
+      ul {
+        font-family: 'Quicksand', sans-serif;
+      }
+      /* images*/
+
+      .home-img {
+        height: 300px;
+        margin: auto;
+
+      }
+
+      .hamburger {
+        height: 25px;
+        color: #e5451a;
+      }
+
+      .bannerHidden {
+        color: #3b54bb;
+        text-align: center;
+      }
+      /* Visual Dividers*/
+
+      .bottomRed {
+        border-bottom: 3px solid #e5451a;
+      }
+
+      hr {
+        border-width: 3px solid #e5451a;
+        width: 100%;
+        margin-top: 0px;
+      }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700|Quicksand:700" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121835518-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121835518-1');
+    </script>
 
 
 </head>
@@ -67,43 +319,67 @@
       <main role="main" class="container">
 
 <!-- TOP BANNER -->
-          <div class="row announcement" id="backgroundImg">
-
-          </div>
+          <img src="assets/hammockText.png" class="headerImg" style="width:100%">
+          <img src="assets/announcement.png" class="altHeaderImg" style="width:100%">
 <!-- EVENT INFO -->
           <div id="event" class="row pt-5">
             <h2>Event Information</h2>
-            <p class="lead">The big event takes place September 2, 2018 at 5:00PM at <a href="https://www.google.com/maps/place/Panorama+Event+Barn/@38.131334,-78.50032,1276m/data=!3m1!1e3!4m5!3m4!1s0x0:0x49bd24e7b2b64a63!8m2!3d38.1313335!4d-78.5003196?hl=en-US" target="_blank">Panorama Event Barn</a> in Charlottesville, VA. A brief outdoor ceremony will precede the celebration.</p>
+            <p class="lead">Our big event takes place Sunday, September 2, 2018 at Panorama Event Barn in Earlysville, VA. We ask guests driving themselves arrive at 4:30PM (see transportation information below). A brief outdoor ceremony will precede the celebration. You and your family are also invited to join us at the pool on Saturday afternoon.</p>
             <div class="col-md-6 col-sm-12">
               <h3 class="text-muted">Transportation</h3>
-                <p>Free parking will be available. The event site is in a rural area just outside of Charlottesville, so if you are unfamiliar with the area or don't want to arrange a designated driver, we recommend using the shuttle service that will be arranged to take guests back and forth between downtown Charlotesville and the venue. More details about the shuttle service will be posted closer to September 2nd. There is not likely to be good cell service at the event venue, so we do not recommend that you try to use Uber to get a ride home.</p>
+                <p>Free parking is be available at the venue. The event site is in a rural area just outside of Charlottesville, so if you are unfamiliar with the area or don't want to arrange a designated driver we recommend taking the shuttle service back and forth between downtown Charlottesville and the venue. There is not likely to be good cell service at the event venue, so we do not recommend that you try to use Uber to get a ride home.</p>
+                <h5 id="shuttle">Shuttle Info</h5>
+                <p>If you choose not to drive to the venue, a free shuttle will be available to take you there. Pre-event pickup and end-of-night dropoff will be at the Courtyard Marriott on West Main Street—a short walk or free trolly ride from many other nearby hotels. Parking is available near the shuttle pickup/dropoff in the 14th Street Garage (for a fee). The shuttle pickup and dropoff location and the nearby parking are marked on <a href="https://www.google.com/maps/d/viewer?mid=1sU65MjnzvF4b0FoWtZjdOGVGzZ75eoou&usp=sharing" target="_blank">this map</a>. Guests taking the early shuttle will enjoy refreshments and yard games while they wait for the rest of the guests to arrive.</p>
+                <p class="italic">Please be prompt, the shuttle will not wait for you.</p>
+                <p class="accent">Heading to the Venue</p>
+                <ul style="list-style-type:none">
+                  <li>3:30PM, early shuttle departs (arrives at venue at 4:00PM)</li>
+                  <li>4:30PM, 2nd shuttle depart (arrives at venue at 5:00PM)</li>
+                </ul>
+                <p class="accent">Heading to the Marriott</p>
+                <ul style="list-style-type:none">
+                  <li>9:15PM, early shuttle departs (arrives at hotel at 9:45PM)</li>
+                  <li>10:25PM, 2nd shuttle departs (arrives at hotel at 10:55PM)</li>
+                </ul>
             </div>
             <div class="col-md-6 col-sm-12">
-              <h3 class="text-muted">Food and Drinks</h3>
-                <p>A family style dinner will be served around 7:00. Snacks will be available before dinner. There will be vegetarian and vegan options, however we ask that you include any dietary restrictions in your RSVP so that we can be sure there's enough for everyone.</p>
-                <p>Guests can enjoy an open bar serving local wine and some of our favorite beers. Until the dance floor opens, we will also be giving tastings of mezcal—a smoky, agave-derived liquor that we've enjoyed since moving to Texas.</p>
+              <h3 class="text-muted">Location</h3>
+                <p>The ceremony and reception will be held at <a href="https://www.google.com/maps/place/Panorama+Event+Barn/@38.131334,-78.50032,1276m/data=!3m1!1e3!4m5!3m4!1s0x0:0x49bd24e7b2b64a63!8m2!3d38.1313335!4d-78.5003196?hl=en-US" target="_blank">Panorama Event Barn</a>:</p>
+                <p class="tcenter">3550 Reas Ford Ln.<br>Earlysville, VA 22936</p>
+                <p>If you are driving yourself, don't worry when you come to a dirt road—you're supposed to be there.</p>
+              <h3 class="text-muted mt-5">Food and Drinks</h3>
+                <p>A family style dinner will be served around 6:30. Snacks will be available before dinner. There will be ample vegetarian and vegan options. We ask, however, that you include any dietary restrictions in your RSVP so that we can be sure there's enough for everyone.</p>
+                <p>Guests can enjoy an open bar serving local wine and some of our favorite beers. We will also be serving small tastings of mezcal—a smoky, agave derived liquor that we've enjoyed since moving to Texas.</p>
               <h3 class="text-muted mt-5">Attire</h3>
-                <p>We want you looking and feeling dazzling! Cocktail attire and your favorite dancing shoes will ensure success. The barn has no air conditioning, so leave your heavy jackets at home. Cocktail hour will be outdoors, so we recommend wearing shoes that can be worn in grass.</p>
+                <p>We want you looking and feeling dazzling! Cocktail attire and your favorite dancing shoes will ensure success. The barn has no air conditioning, so leave heavy jackets at home. Cocktail hour and the ceremony will be outdoors, so we recommend wearing shoes that can be worn in grass. If it rains, the entire event will move inside the barn, but we recommend you bring an umbrella as the walk from the parking area to the barn would leave you soaked otherwise.</p>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.679548441382!2d-78.50560238496288!3d38.133833779695614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b479b6613ef7cd%3A0x49bd24e7b2b64a63!2sPanorama+Event+Barn!5e1!3m2!1sen!2sus!4v1515881101269" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen class="mt-5"></iframe>
+            <!-- POOL PARTY -->
+            <div id="poolParty" class="col-md-12">
+              <h3 class="text-muted mt-5">Pool Party</h3>
+              <p class="lead" style="margin-bottom:0">Spend an afternoon in the sun with us the day before our wedding. All guests and their children are welcome to join us at ACAC Adventure Central in Charlottesville on Saturday, 9-1-2018 from 2:00pm to 5:00pm.</p>
+              <p>There are water slides, a beach entry pool, a diving board, lap lanes, and more for people interested in swimming. Good conversation, shade, snacks, and beverages will be available for those who prefer to stay dry. Please bring your own towel and sun block.</p>
+              <p>You can RSVP to the pool party through the same form as the one you use to RSVP to the wedding. That form is available <a href="rsvp.html" target="_blank">here</a>. Your pool entry will be free. The pool is marked on <a href="https://drive.google.com/open?id=1sU65MjnzvF4b0FoWtZjdOGVGzZ75eoou&usp=sharing" target="_blank">this map</a>; the address is 200 Four Seasons Dr, Charlottesville, VA 22901.</p>
+              <p><span class="accent">A note about bad weather:</span> We will send out information to guests the day before the event to confirm or cancel the pool party. We will also post an update here for your reference.</p>
+            </div>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1sU65MjnzvF4b0FoWtZjdOGVGzZ75eoou" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen class="mt-5"></iframe>
           </div>
 
 <!-- TRAVEL INFO -->
           <div id="travel" class="row pt-5">
             <h2>Travel Information</h2>
-            <p class="lead">Thank you for making the trip to see us! Below, we've put together some information for you to help you make the most of your Labor Day weekend in Charlottesville. You can also reference <a href="https://drive.google.com/open?id=1sU65MjnzvF4b0FoWtZjdOGVGzZ75eoou&usp=sharing" target="_blank">this map</a> to see our favorite activities, restaurants, and the pickup/dropoff locations for the event shuttle (shuttle locations will be added closer to the event).</p>
+            <p class="lead">Thank you for making the trip to see us! Below, we've put together some information for you to help you make the most of your Labor Day weekend in Charlottesville. You can also reference <a href="https://drive.google.com/open?id=1sU65MjnzvF4b0FoWtZjdOGVGzZ75eoou&usp=sharing" target="_blank">this map</a> to see our favorite activities, restaurants, and the pickup/dropoff location for the event shuttle.</p>
             <div class="col-md-6 col-sm-12">
               <h3 class="text-muted">Accomodations</h3>
-                <p>The event will be held a little northwest of Charlottesville, giving you several lodging options. If you would like to stay as close to the event as possible, we recommend <a href="http://doubletree3.hilton.com/en/hotels/virginia/doubletree-by-hilton-hotel-charlottesville-CHOSHDT/index.html">The DoubleTree</a> or <a href="https://www.airbnb.com/s/earlysville--va/homes?allow_override%5B%5D=&checkin=2018-09-01&checkout=2018-09-03&ne_lat=38.17662425904024&ne_lng=-78.4427253261149&sw_lat=38.11628118754308&sw_lng=-78.51035990863443&zoom=13&search_by_map=true&s_tag=822Sg748">an AirBnB in Earlysville</a>. Some of the most affordable options can be <a href="https://www.google.com/maps/search/hotels+/@38.0729589,-78.4910623,14z/data=!3m1!4b1">found on US-29</a>. If you would like to stay closer to the attractions Charlottesville has to offer, we recommend <a href="https://www.google.com/search?rlz=1C5CHFA_enUS715US716&q=hotels+charlottesville+va&npsic=0&rflfq=1&rlha=1&rlla=0&rlhsc=Ch8I2bj90IGNu8EPCPiLl_6oyOH8mAEIvvONq4fn79M_&rllag=38046480,-78489216,1745&tbm=lcl&ved=0ahUKEwis58LhnNjYAhWM3YMKHYijDjIQtgMISA&hotel_dates=2018-01-21,2018-01-22&tbs=lf_hd:-1,lf_ho:2,lrf:!1m4!1u13!2m2!13m1!1b1!1m4!1u10!2m2!11m1!1e4!1m4!1u10!2m2!11m1!1e5!1m4!1u10!2m2!11m1!1e8!1m4!1u10!2m2!11m1!1e10!1m4!1u10!2m2!11m1!1e2!1m4!1u10!2m2!11m1!1e3!2m1!1e13!2m7!1e17!4m2!17m1!1e3!4m2!17m1!1e8!2m1!1e2!2m1!1e4!2m19!1e10!4m2!11m1!1e4!4m2!11m1!1e5!4m2!11m1!1e8!4m2!11m1!1e10!4m2!11m1!1e2!4m2!11m1!1e3!2m21!1e7!4m4!7m3!1m1!1u100!3sUSD!4m4!7m3!1m1!1u150!3sUSD!4m4!7m3!1m1!1u175!3sUSD!4m4!7m3!1m1!1u250!3sUSD!3sIAE,lf:1,lf_ui:6&rldoc=1#rldoc=1&rlfi=hd:2018-09-01,2018-09-03;si:,38.03212016123607,-78.48895218640666;mv:!1m3!1d4157.454697588225!2d-78.4906688001762!3d38.03210325976633!3m2!1i856!2i508!4f13.1">a room in one of the several hotels on West Main Street</a> or at <a href="https://www.omnihotels.com/hotels/charlottesville">the Omni</a>. These latter options will put you walking distance from from the historic University of Virginia grounds and the Downtown Mall.</p>
-                <p>The exact shuttle pickup and dropoff location will be determined closer to the event, but it will be within walking distance of hotels on West Main Street.</p>
+                <p>The event will be held a little northwest of Charlottesville, giving you several lodging options. If you would like to stay as close to the event as possible, we recommend <a href="http://doubletree3.hilton.com/en/hotels/virginia/doubletree-by-hilton-hotel-charlottesville-CHOSHDT/index.html">The DoubleTree</a> or <a href="https://www.airbnb.com/s/earlysville--va/homes?allow_override%5B%5D=&checkin=2018-09-01&checkout=2018-09-03&ne_lat=38.17662425904024&ne_lng=-78.4427253261149&sw_lat=38.11628118754308&sw_lng=-78.51035990863443&zoom=13&search_by_map=true&s_tag=822Sg748">an AirBnB in Earlysville</a>. Some of the most affordable options can be <a href="https://www.google.com/maps/search/hotels+/@38.0729589,-78.4910623,14z/data=!3m1!4b1">found on US-29</a>. If you would like to stay closer to the attractions Charlottesville has to offer, we recommend <a href="https://www.google.com/search?rlz=1C5CHFA_enUS715US716&q=hotels+charlottesville+va&npsic=0&rflfq=1&rlha=1&rlla=0&rlhsc=Ch8I2bj90IGNu8EPCPiLl_6oyOH8mAEIvvONq4fn79M_&rllag=38046480,-78489216,1745&tbm=lcl&ved=0ahUKEwis58LhnNjYAhWM3YMKHYijDjIQtgMISA&hotel_dates=2018-01-21,2018-01-22&tbs=lf_hd:-1,lf_ho:2,lrf:!1m4!1u13!2m2!13m1!1b1!1m4!1u10!2m2!11m1!1e4!1m4!1u10!2m2!11m1!1e5!1m4!1u10!2m2!11m1!1e8!1m4!1u10!2m2!11m1!1e10!1m4!1u10!2m2!11m1!1e2!1m4!1u10!2m2!11m1!1e3!2m1!1e13!2m7!1e17!4m2!17m1!1e3!4m2!17m1!1e8!2m1!1e2!2m1!1e4!2m19!1e10!4m2!11m1!1e4!4m2!11m1!1e5!4m2!11m1!1e8!4m2!11m1!1e10!4m2!11m1!1e2!4m2!11m1!1e3!2m21!1e7!4m4!7m3!1m1!1u100!3sUSD!4m4!7m3!1m1!1u150!3sUSD!4m4!7m3!1m1!1u175!3sUSD!4m4!7m3!1m1!1u250!3sUSD!3sIAE,lf:1,lf_ui:6&rldoc=1#rldoc=1&rlfi=hd:2018-09-01,2018-09-03;si:,38.03212016123607,-78.48895218640666;mv:!1m3!1d4157.454697588225!2d-78.4906688001762!3d38.03210325976633!3m2!1i856!2i508!4f13.1">a room in one of the several hotels on West Main Street</a>, including the Courtyard Marriott where the <a href="#shuttle">shuttle service</a>—available to all—will pickup and dropoff guests for the wedding. These latter options will put you walking distance from from the historic University of Virginia grounds and the Downtown Mall.</p>
               <h3 class="text-muted mt-5">Activities</h3>
                 <p>Charlottesville is a beautiful place to spend a holiday weekend. If you have the time, we highly recommend that you explore the area. Check out the list below, or see what's near you on <a href="https://drive.google.com/open?id=1sU65MjnzvF4b0FoWtZjdOGVGzZ75eoou&usp=sharing" target="_blank">this map</a> we've made for the occasion.</p>
                 <div class="row">
                   <div class="col-md-6 col-sm-12">
-                    <p>Activities in Charlottesville:</p>
+                    <p class="accent">Charlottesville:</p>
                     <ul>
                       <li><a href="http://www.downtowncharlottesville.net/" target="_blank">Dine, shop, or walk on the Downtown Mall</a></li>
-                      <li><a href="http://www.virginia.edu/visit" target="_blank">Tour the grounds, gardens, and museum at UVA</a></li>
+                      <li><a href="https://ev12.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3AVIRGINIA%3AF18%3AF01%3A&linkID=virginia&shopperContext=&pc=&caller=&appCode=&groupCode=&cgc=" target="_blank">See a UVA football game</a></li>
+                      <li><a href="http://www.virginia.edu/visit" target="_blank">Tour the grounds, gardens, special collections libary, and art museum at UVA</a></li>
                       <li><a href="http://events.c-ville.com/" target="_blank">See a show downtown</a></li>
                       <li><a href="https://acac.com/charlottesville/aquatics/waterpark/" target="_blank">Spend the afternoon at the pool</a></li>
                       <li><a href="https://www.monticello.org/site/visit/overview-saunders-monticello-trail" target="_blank">Walk the Saunders-Monticello trail</a></li>
@@ -112,7 +388,7 @@
                     </ul>
                   </div>
                   <div class="col-md-6 col-sm-12">
-                    <p>Activities in the surrounding area:</p>
+                    <p class="accent">Surrounding area:</p>
                     <ul>
                       <li><a href="https://www.theoutbound.com/virginia/hiking/hike-humpback-rocks" target="_blank">Hike Humpback Rock</a></li>
                       <li><a href="https://www.nps.gov/shen/planyourvisit/driving-skyline-drive.htm" target="_blank">Enjoy the scenery on Skyline Drive</a></li>
@@ -127,30 +403,30 @@
 
             <div class="col-md-6 col-sm-12">
               <h3 class="text-muted">Airports</h3>
-                <p>Charlottesville has its own small airport (CHO) that travelers from out of town may choose to fly into. There are several other airports that may offer cheaper or more convenient flights, but please note that those alternatives are a non-trivial drive from Charlottesville. The Richmond airport (RIC) is just over an hour east of Charlottesville, while the Dulles (IAD) and Reagan (DCA) airports are about two hours north.</p>
+                <p>Charlottesville has its own airport (CHO) that travelers from out of town may choose to fly into. There are several other airports that may offer cheaper or more convenient flights, but please note that those alternatives are a non-trivial drive from Charlottesville. The Richmond airport (RIC) is just over an hour east of Charlottesville, while the Dulles (IAD) and Reagan (DCA) airports are about two hours north.</p>
               <h3 class="text-muted mt-5">Food</h3>
                 <p>If, like us, one of your favorite things to do is eat, Charlottesville won't let you down. Below are some of our favorite restaurants in the area; they are also marked on <a href="https://drive.google.com/open?id=1sU65MjnzvF4b0FoWtZjdOGVGzZ75eoou&usp=sharing" target="_blank">this map</a>. </p>
                 <ul>
-                  <li><a href="" target="_blank">Bagels: Bodos</a></li>
-                  <li><a href="" target="_blank">Brunch: Shebeen</a></li>
-                  <li><a href="" target="_blank">Brunch: Fardowners</a></li>
-                  <li><a href="" target="_blank">Burgers: Citizen Burger</a></li>
-                  <li><a href="" target="_blank">Burgers: Boylan Heights</a></li>
-                  <li><a href="" target="_blank">Chinese (Taiwanese): Cafe 88</a></li>
-                  <li><a href="" target="_blank">Chinese (takeout/delivery): Chopsticks Express</a></li>
-                  <li><a href="" target="_blank">Dumplings: Marco and Luca</a> (try the hot and sour soup!)</li>
-                  <li><a href="" target="_blank">Italian: Bella's</a></li>
-                  <li><a href="" target="_blank">Italian: Tavola</a></li>
-                  <li><a href="" target="_blank">Mexican: Continental Divide</a></li>
-                  <li><a href="" target="_blank">Mexican: Brazos Tacos</a></li>
-                  <li><a href="" target="_blank">Pizza: Christian's Pizza</a></li>
-                  <li><a href="" target="_blank">Pizza: Crozet Pizza</a></li>
-                  <li><a href="" target="_blank">Sandwiches: Take it Away</a></li>
-                  <li><a href="" target="_blank">Sandwiches: Bellair Market</a></li>
-                  <li><a href="" target="_blank">Tapas: Mas</a></li>
-                  <li><a href="" target="_blank">Cocktails: Alley Light</a></li>
-                  <li><a href="" target="_blank">Beer: 3 Notch'd Brewery</a></li>
-                  <li><a href="" target="_blank">Beer: Champion Brewery</a></li>
+                  <li><a href="http://www.bodosbagels.com/" target="_blank">Bagels: Bodos</a></li>
+                  <li><a href="http://www.shebeen.com/" target="_blank">Brunch: Shebeen</a></li>
+                  <li><a href="http://www.fardowners.com/" target="_blank">Brunch: Fardowners</a></li>
+                  <li><a href="http://citizenburgerbar.com/" target="_blank">Burgers: Citizen Burger</a></li>
+                  <li><a href="http://www.boylan-heights.com/" target="_blank">Burgers: Boylan Heights</a></li>
+                  <li><a href="http://places.singleplatform.com/cafe-88-chinese-restaurant/menu?ref=google" target="_blank">Chinese (Taiwanese): Cafe 88</a></li>
+                  <li><a href="http://www.chopsticksexpress29.com/" target="_blank">Chinese (takeout/delivery): Chopsticks Express</a></li>
+                  <li><a href="https://www.facebook.com/Marco-Luca-Dumpling-Store-167230659965661/" target="_blank">Dumplings: Marco and Luca</a> (try the hot and sour soup!)</li>
+                  <li><a href="https://www.bellas-restaurant.com/" target="_blank">Italian: Bella's</a></li>
+                  <li><a href="https://tavolavino.com/" target="_blank">Italian: Tavola</a></li>
+                  <li><a href="http://www.continentaldivide.website/" target="_blank">Mexican: Continental Divide</a></li>
+                  <li><a href="http://brazostacos.com/wp/" target="_blank">Mexican: Brazos Tacos</a></li>
+                  <li><a href="http://christians.pizza/" target="_blank">Pizza: Christian's Pizza</a></li>
+                  <li><a href="https://www.crozetpizza.com/" target="_blank">Pizza: Crozet Pizza</a></li>
+                  <li><a href="https://www.takeitawaysandwichshop.com/" target="_blank">Sandwiches: Take it Away</a></li>
+                  <li><a href="http://tigerfuelmarkets.com/menu" target="_blank">Sandwiches: Bellair Market</a></li>
+                  <li><a href="http://www.mastapas.com/" target="_blank">Tapas: Mas</a></li>
+                  <li><a href="https://alleylight.com/" target="_blank">Cocktails: Alley Light</a></li>
+                  <li><a href="https://threenotchdbrewing.com/charlottesville-craft-kitchen-brewery/" target="_blank">Beer: 3 Notch'd Brewery</a></li>
+                  <li><a href="http://championbrewingcompany.com/" target="_blank">Beer: Champion Brewery</a></li>
                 </ul>
             </div>
           </div>
@@ -158,6 +434,7 @@
           <div id="registry" class="row pt-5">
             <h2>Registry</h2>
             <p class="lead">What's most important to us is celebrating such a big moment in our lives with you. However, if you would like to help us build our home and life together, you can refer to our registry on <a href="https://www.zola.com/registry/hannahandchrisgetmarried" target="_blank">Zola</a>. Alternatively, you can donate to one of these organizations that are important to us: <a href="https://kut.secureallegiance.com/kut/WebModule/Donate.aspx?P=KUTOA&PAGETYPE=PLG&CHECK=aI6A0UTYM%2bPiQl%2byqVkEd4HJipnY8PNT" target="_blank">NPR</a>, <a href="https://www.plannedparenthood.org/get-involved/other-ways-give" target="_blank">Planned Parenthood</a>, or <a href="https://wikimediafoundation.org/wiki/Ways_to_Give" target="_blank">Wikipedia</a>.</p>
+            <p><span class="accent">Please note</span> neither Chris nor Hannah are changing their last names. Please address any correspondance to Mr. Chris Pillow and Ms. Hannah Cohoon.</p>
           </div>
 
             </div>
